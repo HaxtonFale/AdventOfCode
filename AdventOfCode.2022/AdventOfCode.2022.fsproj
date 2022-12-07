@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Inputs\d1p1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inputs\d2p1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inputs\d3p1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inputs\d4p1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Inputs\d5p1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -14,9 +26,17 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Compile Include="Helpers.fs" />
+    <Compile Include="Day1.fs" />
+    <Compile Include="Day2.fs" />
+    <Compile Include="Day3.fs" />
+    <Compile Include="Day4.fs" />
     <Compile Include="Day5.fs" />
     <Compile Include="Day6.fs" />
     <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser.FSharp" Version="2.9.1" />
   </ItemGroup>
 
 </Project>
