@@ -1,1 +1,1 @@
-﻿Day5.part2 (Helpers.Inputs.read 5 1)
+﻿Day6.part2 (Helpers.Inputs.read 6 1)

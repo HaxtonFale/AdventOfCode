@@ -14,8 +14,7 @@
 
     module Inputs =
         let read (day: int) (part: int): string list = [
-            let filename = $"Inputs\d{day}p{part}.txt"
-            use reader = new System.IO.StreamReader(filename)
+            use reader = new System.IO.StreamReader($"Inputs\d{day}p{part}.txt")
             while not reader.EndOfStream do
                 yield reader.ReadLine ()
         ]
