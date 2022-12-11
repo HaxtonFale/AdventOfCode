@@ -26,6 +26,14 @@ let run (day: int) (part: int): unit =
         Day6.part1 (Helpers.Inputs.read day 1)
     | 6, 2 ->
         Day6.part2 (Helpers.Inputs.read day 1)
+    | 7, 1 ->
+        Day7.part1 (Helpers.Inputs.read day 1)
+    | 7, 2 ->
+        Day7.part2 (Helpers.Inputs.read day 1)
+    | 8, 1 ->
+        Day8.part1 (Helpers.Inputs.read day 1)
+    | 8, 2 ->
+        Day8.part2 (Helpers.Inputs.read day 1)
     | _ ->
         if part > 2 || part < 1 then
             invalidArg (nameof part) (sprintf "Invalid part number: %d" part)
@@ -37,7 +45,7 @@ type Options = {
     [<Option('p', "part", Required = false)>] part: int option
 }
 
-let maxDay = 3
+let maxDay = 8
 [<EntryPoint>]
 let main (args:string array) =
     match CommandLine.Parser.Default.ParseArguments<Options> args with
