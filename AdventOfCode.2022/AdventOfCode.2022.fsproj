@@ -37,15 +37,22 @@
     <Content Include="Inputs\d8p1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Inputs\d9p0.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inputs\d9p1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Helpers.fs" />
-    <Compile Include="Day1.fs" />
-    <Compile Include="Day2.fs" />
-    <Compile Include="Day3.fs" />
-    <Compile Include="Day4.fs" />
-    <Compile Include="Day5.fs" />
-    <Compile Include="Day6.fs" />
-    <Compile Include="Day7.fs" />
-    <Compile Include="Day8.fs" />
+    <Compile Include="Day01.fs" />
+    <Compile Include="Day02.fs" />
+    <Compile Include="Day03.fs" />
+    <Compile Include="Day04.fs" />
+    <Compile Include="Day05.fs" />
+    <Compile Include="Day06.fs" />
+    <Compile Include="Day07.fs" />
+    <Compile Include="Day08.fs" />
+    <Compile Include="Day09.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

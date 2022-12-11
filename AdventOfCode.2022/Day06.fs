@@ -1,4 +1,4 @@
-﻿module Day6
+﻿module Day06
     let detect (consecutive: int) (input: char list): int =
         let limit = consecutive - 1
         let rec recurse (queue: char list) (input: char list): int =

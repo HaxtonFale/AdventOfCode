@@ -1,4 +1,4 @@
-﻿module Day4
+﻿module Day04
     type Section = int * int
 
     let contains ((lStart, lEnd): Section) ((rStart, rEnd): Section): bool = lStart <= rStart && lEnd >= rEnd || lStart >= rStart && lEnd <= rEnd

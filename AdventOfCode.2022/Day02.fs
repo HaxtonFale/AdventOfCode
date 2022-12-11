@@ -1,4 +1,4 @@
-﻿module Day2
+﻿module Day02
     open System.Text.RegularExpressions
 
     module private RPS =

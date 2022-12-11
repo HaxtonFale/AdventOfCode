@@ -1,4 +1,4 @@
-﻿module Day1
+﻿module Day01
     let solve (top: int): string list -> unit =
         Helpers.List.partitionOnElement "" >> List.map (List.sumBy int) >> List.sortDescending >> List.take top >> List.sum >> printfn "%d"
 

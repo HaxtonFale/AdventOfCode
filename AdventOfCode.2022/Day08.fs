@@ -1,4 +1,4 @@
-﻿module Day8
+﻿module Day08
 
     let isVisible (trees: int list list) ((x, y): int * int): bool =
         let row = trees[x]

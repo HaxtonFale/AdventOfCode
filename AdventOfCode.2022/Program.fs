@@ -3,37 +3,39 @@
 let run (day: int) (part: int): unit =
     match day, part with
     | 1, 1 ->
-        Day1.part1 (Helpers.Inputs.read day 1)
+        Day01.part1 (Helpers.Inputs.read day 1)
     | 1, 2 ->
-        Day1.part2 (Helpers.Inputs.read day 1)
+        Day01.part2 (Helpers.Inputs.read day 1)
     | 2, 1 ->
-        Day2.part1 (Helpers.Inputs.read day 1)
+        Day02.part1 (Helpers.Inputs.read day 1)
     | 2, 2 ->
-        Day2.part2 (Helpers.Inputs.read day 1)
+        Day02.part2 (Helpers.Inputs.read day 1)
     | 3, 1 ->
-        Day3.part1 (Helpers.Inputs.read day 1)
+        Day03.part1 (Helpers.Inputs.read day 1)
     | 3, 2 ->
-        Day3.part2 (Helpers.Inputs.read day 1)
+        Day03.part2 (Helpers.Inputs.read day 1)
     | 4, 1 ->
-        Day4.part1 (Helpers.Inputs.read day 1)
+        Day04.part1 (Helpers.Inputs.read day 1)
     | 4, 2 ->
-        Day4.part2 (Helpers.Inputs.read day 1)
+        Day04.part2 (Helpers.Inputs.read day 1)
     | 5, 1 ->
-        Day5.part1 (Helpers.Inputs.read day 1)
+        Day05.part1 (Helpers.Inputs.read day 1)
     | 5, 2 ->
-        Day5.part2 (Helpers.Inputs.read day 1)
+        Day05.part2 (Helpers.Inputs.read day 1)
     | 6, 1 ->
-        Day6.part1 (Helpers.Inputs.read day 1)
+        Day06.part1 (Helpers.Inputs.read day 1)
     | 6, 2 ->
-        Day6.part2 (Helpers.Inputs.read day 1)
+        Day06.part2 (Helpers.Inputs.read day 1)
     | 7, 1 ->
-        Day7.part1 (Helpers.Inputs.read day 1)
+        Day07.part1 (Helpers.Inputs.read day 1)
     | 7, 2 ->
-        Day7.part2 (Helpers.Inputs.read day 1)
+        Day07.part2 (Helpers.Inputs.read day 1)
     | 8, 1 ->
-        Day8.part1 (Helpers.Inputs.read day 1)
+        Day08.part1 (Helpers.Inputs.read day 1)
     | 8, 2 ->
-        Day8.part2 (Helpers.Inputs.read day 1)
+        Day08.part2 (Helpers.Inputs.read day 1)
+    | 9, 1 ->
+        Day09.part1 (Helpers.Inputs.read day 1)
     | _ ->
         if part > 2 || part < 1 then
             invalidArg (nameof part) (sprintf "Invalid part number: %d" part)

@@ -1,4 +1,4 @@
-﻿module Day3
+﻿module Day03
     let priority (item: char): int =
         if System.Char.IsUpper item then
             int item - int 'A' + 27
