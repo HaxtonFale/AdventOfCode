@@ -25,6 +25,12 @@
     <Content Include="Inputs\d6p1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Inputs\d7p0.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inputs\d7p1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Helpers.fs" />
     <Compile Include="Day1.fs" />
     <Compile Include="Day2.fs" />
@@ -32,6 +38,7 @@
     <Compile Include="Day4.fs" />
     <Compile Include="Day5.fs" />
     <Compile Include="Day6.fs" />
+    <Compile Include="Day7.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
