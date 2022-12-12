@@ -38,6 +38,10 @@ let run (day: int) (part: int): unit =
         Day09.part1 (Helpers.Inputs.read day 1)
     | 9, 2 ->
         Day09.part2 (Helpers.Inputs.read day 1)
+    | 10, 1 ->
+        Day10.part1 (Helpers.Inputs.read day 1)
+    | 10, 2 ->
+        Day10.part2 (Helpers.Inputs.read day 1)
     | _ ->
         if part > 2 || part < 1 then
             invalidArg (nameof part) (sprintf "Invalid part number: %d" part)
@@ -47,17 +51,20 @@ let run (day: int) (part: int): unit =
 type Options = {
     [<Option('d', "day", Required = false)>] day: int option
     [<Option('p', "part", Required = false)>] part: int option
+    [<Option('l', "latest", Required = false)>] latestDay: bool
 }
 
-let maxDay = 8
+let maxDay = 10
 [<EntryPoint>]
 let main (args:string array) =
     match CommandLine.Parser.Default.ParseArguments<Options> args with
     | :? Parsed<Options> as parsed ->
         let days =
-            match parsed.Value.day with
-            | None -> [1..maxDay]
-            | Some d -> [d]
+            if parsed.Value.latestDay then [maxDay]
+            else
+                match parsed.Value.day with
+                | None -> [1..maxDay]
+                | Some d -> [d]
         let parts =
             match parsed.Value.part with
             | None -> [1; 2]
