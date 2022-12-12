@@ -36,6 +36,8 @@ let run (day: int) (part: int): unit =
         Day08.part2 (Helpers.Inputs.read day 1)
     | 9, 1 ->
         Day09.part1 (Helpers.Inputs.read day 1)
+    | 9, 2 ->
+        Day09.part2 (Helpers.Inputs.read day 1)
     | _ ->
         if part > 2 || part < 1 then
             invalidArg (nameof part) (sprintf "Invalid part number: %d" part)

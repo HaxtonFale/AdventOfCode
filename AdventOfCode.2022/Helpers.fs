@@ -17,6 +17,12 @@
             | [] -> [[]]
             | x::xs -> if predicate x then let y::ys = splitWhen predicate xs in (x::y)::ys else ([]::[input])
 
+        let rec takeLast (input: 'a list): 'a =
+            match input with
+            | [] -> invalidArg (nameof input) "Invalid argument: empty list"
+            | [x] -> x
+            | _::xs -> takeLast xs
+
     module Inputs =
         let read (day: int) (part: int): string list = [
             use reader = new System.IO.StreamReader($"Inputs\d{day}p{part}.txt")

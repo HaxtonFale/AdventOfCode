@@ -27,6 +27,21 @@
         | Left -> x, y - 1
         | Right -> x, y + 1
 
+    let rec moveRope (segments: Position list list) ((move, distance): Move * int): Position list list =
+        if distance = 0 then segments
+        else
+            let head::tail = segments
+            let movedHead = (moveOnce head.Head move)::head
+            let movedSegments = (List.fold (
+                fun (newSegments: Position list list) (s::ss: Position list) ->
+                    let prevSegmentPos = (Helpers.List.takeLast newSegments).Head
+                    if adjacent prevSegmentPos s then newSegments @ [(s::s::ss)]
+                    else
+                        let currentSegmentPos = moveTail s prevSegmentPos
+                        newSegments @ [(currentSegmentPos::s::ss)]
+            ) [movedHead] tail)
+            moveRope movedSegments (move, distance - 1)
+
     let rec processMove ((h::hs, t::ts): Position list * Position list) ((move, distance): Move * int): Position list * Position list =
         if distance = 0 then (h::hs, t::ts)
         else
@@ -37,8 +52,17 @@
     let part1 (input: string list): unit =
         input
         |> List.map parse
-        |> List.fold processMove ([0,0], [0,0])
-        |> snd
+        |> List.fold moveRope (List.init 2 (fun _ -> [0,0]))
+        |> Helpers.List.takeLast
+        |> List.distinct
+        |> List.length
+        |> printfn "%d"
+
+    let part2 (input: string list): unit =
+        input
+        |> List.map parse
+        |> List.fold moveRope (List.init 10 (fun _ -> [0,0]))
+        |> Helpers.List.takeLast
         |> List.distinct
         |> List.length
         |> printfn "%d"
